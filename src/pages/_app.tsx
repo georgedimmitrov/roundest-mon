@@ -1,13 +1,12 @@
-import "tailwindcss/tailwind.css";
-import "../styles/global.css";
-import type { AppProps } from "next/app";
+import 'tailwindcss/tailwind.css';
+import '../styles/global.css';
+import type { AppProps } from 'next/app';
+import { withTRPC } from '@trpc/next';
+import type { AppRouter } from '@/backend/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
-
-import { withTRPC } from "@trpc/next";
-import type { AppRouter } from "@/backend/router";
 
 export default withTRPC<AppRouter>({
   config({ ctx }) {
@@ -17,7 +16,7 @@ export default withTRPC<AppRouter>({
      */
     const url = process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}/api/trpc`
-      : "http://localhost:3000/api/trpc";
+      : 'http://localhost:3000/api/trpc';
 
     return {
       url,
