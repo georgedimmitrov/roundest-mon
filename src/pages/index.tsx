@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { inferQueryResponse } from './api/trpc/[trpc]';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const btn =
   'inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500';
@@ -52,7 +53,11 @@ export default function Home() {
         <div className="p-2"></div>
       </div>
       <div className="absolute bottom-0 w-full text-xl text-center pb-2">
-        <a href="https://github.com/georgedimmitrov/roundest-mon">Github</a>
+        <a href="https://github.com/georgedimmitrov/roundest-mon">Github</a>{' '}
+        {' | '}
+        <Link href="/results">
+          <a>Results</a>
+        </Link>
       </div>
     </div>
   );
