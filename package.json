@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\""
   },
   "dependencies": {
     "@prisma/client": "3.5.0",
@@ -26,6 +28,7 @@
     "postcss": "^8.4.1",
     "prisma": "3.5.0",
     "tailwindcss": "^2.2.19",
+    "ts-node": "^10.5.0",
     "typescript": "4.5.2"
   }
 }
