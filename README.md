@@ -12,7 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## TODO
 
-- [ ] Use next/image to handle image caching and better rendering
-- [ ] Persist data fetched from Pokemon API
-- [ ] Create the results page with counting/sorting
-  - [ ] Maybe move images to bulbapedia
+- [x] Use next/image to handle image caching and better rendering
+- [x] Persist data fetched from Pokemon API
+- [x] Create the results page with counting/sorting
+- [ ] Better loading state between votes
